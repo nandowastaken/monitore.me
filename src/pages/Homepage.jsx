@@ -33,7 +33,7 @@ export default function Homepage() {
                         <option value="vespertino">Vespertino</option>
                     </select>
 
-                    <button type="button">Pesquisar</button>
+                    <button type="submit">Pesquisar</button>
 
                 </form>
             </div>
