@@ -5,13 +5,36 @@ import LoggedIn from "./LoggedIn";
 import "../styles/Navbar.css";
 
 export default function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userPhoto, setUserPhoto] = useState("");
 
-  function checkLoginStatus() {}
+  const checkTokenValidity = async () => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      const response = await fetch("http://localhost:8080/welcome", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ token }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setIsLoggedIn(true);
+      } else {
+        localStorage.removeItem("token");
+        setIsLoggedIn(false);
+      }
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
 
   useEffect(() => {
-    checkLoginStatus();
+    checkTokenValidity();
   }, []);
 
   return (

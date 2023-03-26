@@ -5,7 +5,7 @@
 
     border: 1px solid rgba(0, 0, 0, 0.7);
     gap: 8px;
-    width: 200px;
+    width: 140px;
     padding: 3px;
     border-radius: 20px;
 
@@ -16,6 +16,10 @@
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 10px;
     color: #160C28;
+}
+
+.Link {
+    text-decoration: none;
 }
