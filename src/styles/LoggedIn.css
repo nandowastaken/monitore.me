@@ -1,0 +1,19 @@
+.LoggedIn {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.add-schedule-button {
+    cursor: pointer;
+}
+
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-image: url('src/assets/cute-dog.jpg');
+    cursor: pointer;
+}

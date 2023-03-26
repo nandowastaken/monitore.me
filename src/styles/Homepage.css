@@ -1,0 +1,96 @@
+:root {
+    --selectBoxColor: #D9D9D9;
+    --textColor: #000000;
+}
+
+.Homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--textColor);
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    height: 90vh;
+}
+
+.search-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--textColor);
+}
+
+.search-paragraph {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.search-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.labelContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-family: 'Inter', sans-serif;;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--textColor);
+}
+
+.select-box {
+    box-sizing: border-box;
+    border: none;
+    width: 135px;
+    height: 40px;
+    background: var(--selectBoxColor);
+}
+
+.search-button {
+    border: none;
+    width: 181px;
+    height: 45px;
+    background: var(--selectBoxColor);
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--textColor);
+
+    cursor: pointer;
+
+}
