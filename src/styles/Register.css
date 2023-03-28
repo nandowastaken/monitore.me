@@ -1,0 +1,80 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    gap: 30px;
+}
+
+.register-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    /* Hard coded as fuck, change it later*/
+    width: 870px; 
+    
+}
+
+.register-header-title {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    color: #000000;
+}
+
+.register-header-paragraph {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+}
+
+.register-label {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+}
+    
+.register-input-box, .register-select-box {
+    box-sizing: border-box;
+    border: none;
+    width: 361.11px;
+    height: 40px;
+    background: #D9D9D9;
+}
+
+.inputs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 149px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;   
+}
+
+.register-button {
+    width: 871px;
+    height: 45px;
+    background: #D9D9D9;
+    border: none;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #090809;
+
+    cursor: pointer;
+}

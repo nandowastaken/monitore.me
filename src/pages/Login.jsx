@@ -69,9 +69,14 @@ export default function Login() {
           />
         </div>
 
-        <button type="submit" className="login-button">
-          Entrar
-        </button>
+        <div className="final-part">
+          <button type="submit" className="login-button">
+            Entrar
+          </button>
+          <Link to="/register" className="create-account-text">
+            Criar uma conta.
+          </Link>
+        </div>
       </form>
     </div>
   );
