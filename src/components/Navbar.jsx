@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 import NotLoggedIn from "./NotLoggedIn";
 import LoggedIn from "./LoggedIn";
 import "../styles/Navbar.css";
@@ -39,9 +40,8 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="logo">
-        monitoria-agenda.com
-      </Link>
+      <Logo/>
+      
 
       <div className="profile-container">
         {isLoggedIn ? <LoggedIn /> : <NotLoggedIn />}

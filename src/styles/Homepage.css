@@ -1,5 +1,6 @@
 :root {
-    --selectBoxColor: #D9D9D9;
+    --weakBlue: rgb(15, 113, 242, 0.3);
+    --strongBlue: #0F71F2;
     --textColor: #000000;
 }
 
@@ -76,20 +77,22 @@
     border: none;
     width: 135px;
     height: 40px;
-    background: var(--selectBoxColor);
+    border-radius: 20px;
+    background: var(--weakBlue);
 }
 
 .search-button {
     border: none;
     width: 181px;
     height: 45px;
-    background: var(--selectBoxColor);
+    background: var(--strongBlue);
 
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    color: var(--textColor);
+    color: white;
+    border-radius: 20px;
 
     cursor: pointer;
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import Logo from "../components/Logo";
 import "../styles/Login.css";
 
 export default function Login() {
@@ -34,9 +35,7 @@ export default function Login() {
   return (
     <div className="Login">
       <nav className="home-nav">
-        <Link to="/" className="home-link">
-          monitoria-agenda.com
-        </Link>
+        <Logo/>
       </nav>
 
       <form className="login-form" onSubmit={handleLogin}>

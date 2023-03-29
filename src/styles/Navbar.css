@@ -5,13 +5,3 @@
     width: 90vw;
     margin-top: 20px;
 }
-
-.logo {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    cursor: pointer;
-    color: var(--textColor);
-    text-decoration: none;
-}

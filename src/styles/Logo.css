@@ -1,0 +1,12 @@
+.logo {
+    font-family: 'Poppins', sans-serif;;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: #0F71F2;
+}
+
+.logo-link {
+    text-decoration: none;
+}
