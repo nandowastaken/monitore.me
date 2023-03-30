@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Register.css";
+import Logo from "../components/Logo";
 
 export default function Register() {
   const [nome, setNome] = useState("");
@@ -14,10 +15,8 @@ export default function Register() {
 
   return (
     <div className="Register">
-      <nav className="home-nav">
-        <Link to="/" className="home-link">
-          monitoria-agenda.com
-        </Link>
+      <nav className="navbar">
+        <Logo />
       </nav>
 
       <form className="register-form">

@@ -34,8 +34,8 @@ export default function Login() {
 
   return (
     <div className="Login">
-      <nav className="home-nav">
-        <Logo/>
+      <nav className="navbar">
+        <Logo />
       </nav>
 
       <form className="login-form" onSubmit={handleLogin}>
