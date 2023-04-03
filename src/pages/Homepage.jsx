@@ -1,11 +1,11 @@
 import "../styles/Homepage.css";
 import Navbar from "../components/Navbar";
+import Profile from "../components/Profile";
 
 export default function Homepage() {
   return (
     <div className="Homepage">
       <Navbar />
-
       <div className="search">
         <div className="header">
           <h2 className="search-title">
