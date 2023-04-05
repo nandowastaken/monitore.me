@@ -1,0 +1,105 @@
+.ChangePicture {
+    width: 300px;
+    height: 493px;
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+.close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+
+.close-icon {
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+.app-title {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #0F71F2;
+}
+
+.profile-picture-explanation {
+    width: 80%;
+}
+
+.profile-picture-explanation-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    color: #000000;
+
+
+}
+
+.profile-picture-explanation-description {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 12px;
+    color: #000000;
+}
+
+.profile-picture-change {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-picture-change-img {
+    width: 194px;
+    height: 194px;
+    border-radius: 50%;
+    background-image: url('https://raw.githubusercontent.com/nandowastaken/icons-storage/main/profile%20pics/cute_rave_dog.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.profile-picture-change-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-picture-change-button {
+    border: none;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0F71F2;
+    cursor: pointer;
+
+
+    box-sizing: border-box;
+
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+}
+
+.profile-picture-change-button:hover {
+    background-color: #e7eef8;
+}

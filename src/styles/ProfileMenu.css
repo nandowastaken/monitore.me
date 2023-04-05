@@ -58,6 +58,10 @@
     
 }
 
+.change-icon:hover {
+    background-color: rgba(189, 189, 189, 0.9);
+}
+
 .profile-menu-name {
     font-family: 'Poppins', sans-serif;
     font-style: normal;

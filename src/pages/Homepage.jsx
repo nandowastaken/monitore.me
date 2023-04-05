@@ -3,13 +3,19 @@ import "../styles/Homepage.css";
 import Navbar from "../components/Navbar";
 import ProfileMenu from "../components/ProfileMenu";
 import Schedule from "../components/Schedule";
+import ChangePicture from "../components/ChangePicture";
 
 export default function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isChangePictureOpen, setIsChangePictureOpen] = useState(false);
   const [visibleHeader, setVisibleHeader] = useState("true");
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
+  }
+
+  function toggleChangePicture() {
+    setIsChangePictureOpen(!isChangePictureOpen);
   }
 
   function toggleHeader() {
@@ -24,7 +30,18 @@ export default function Homepage() {
     <div className="Homepage">
       <Navbar toggleMenu={toggleMenu} />
       <div className="profile-menu-container">
-        <ProfileMenu isVisible={isMenuOpen} />
+        <ProfileMenu
+          isVisible={isMenuOpen}
+          toggleChangePicture={toggleChangePicture}
+        />
+      </div>
+
+      <div
+        className="change-profile-picture-container"
+        style={{ display: isChangePictureOpen ? "flex" : "none" }}
+      >
+        <div className="black-screen"></div>
+        <ChangePicture toggleChangePicture={toggleChangePicture} />
       </div>
 
       <div className={visibleHeader ? "search" : "search active"}>

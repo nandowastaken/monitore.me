@@ -29,7 +29,7 @@ export default function ProfileMenu(props) {
             className="profile-menu-img"
             style={{ backgroundImage: `url(${profileImageUrl})` }}
           >
-            <button className="change-icon">
+            <button className="change-icon" onClick={props.toggleChangePicture}>
               <img src="src/assets/camera-icon.svg" alt="" />
             </button>
           </div>
