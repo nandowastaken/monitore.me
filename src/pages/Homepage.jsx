@@ -5,7 +5,12 @@ import Profile from "../components/Profile";
 import Schedule from "../components/Schedule";
 
 export default function Homepage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [visibleHeader, setVisibleHeader] = useState("true");
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
 
   function toggleHeader() {
     setVisibleHeader(false);
@@ -17,7 +22,10 @@ export default function Homepage() {
 
   return (
     <div className="Homepage">
-      <Navbar />
+      <Navbar toggleMenu={toggleMenu} />
+      <div className="profile-menu-container">
+        <Profile isVisible={isMenuOpen} />
+      </div>
 
       <div className={visibleHeader ? "search" : "search active"}>
         <div className={visibleHeader ? "header" : "NotVisible"}>

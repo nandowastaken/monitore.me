@@ -5,7 +5,7 @@ import NotLoggedIn from "./NotLoggedIn";
 import LoggedIn from "./LoggedIn";
 import "../styles/Navbar.css";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userPhoto, setUserPhoto] = useState("");
 
@@ -40,11 +40,14 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Logo/>
-      
+      <Logo />
 
       <div className="profile-container">
-        {isLoggedIn ? <LoggedIn /> : <NotLoggedIn />}
+        {isLoggedIn ? (
+          <LoggedIn toggleMenu={props.toggleMenu} />
+        ) : (
+          <NotLoggedIn />
+        )}
       </div>
     </nav>
   );

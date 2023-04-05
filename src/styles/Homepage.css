@@ -18,6 +18,14 @@
     width: 90vw;
 }
 
+.profile-menu-container {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 11vh;
+    width: 90vw;
+}
+
 .logo {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
