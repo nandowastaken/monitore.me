@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../styles/Homepage.css";
 import Navbar from "../components/Navbar";
-import Profile from "../components/Profile";
+import ProfileMenu from "../components/ProfileMenu";
 import Schedule from "../components/Schedule";
 
 export default function Homepage() {
@@ -24,7 +24,7 @@ export default function Homepage() {
     <div className="Homepage">
       <Navbar toggleMenu={toggleMenu} />
       <div className="profile-menu-container">
-        <Profile isVisible={isMenuOpen} />
+        <ProfileMenu isVisible={isMenuOpen} />
       </div>
 
       <div className={visibleHeader ? "search" : "search active"}>
