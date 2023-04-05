@@ -1,6 +1,23 @@
+import React, { useState, useEffect } from "react";
+import jwtDecode from "jwt-decode";
 import "../styles/ChangePicture.css";
 
 export default function ChangePicture(props) {
+  const [profileImageUrl, setProfileImageUrl] = useState("");
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const decodedToken = jwtDecode(token);
+    const userId = decodedToken.userId;
+
+    fetch(`http://localhost:8080/monitores/${userId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(setProfileImageUrl(data[0].foto));
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
   return (
     <div className="ChangePicture">
       <div className="close">
@@ -22,7 +39,10 @@ export default function ChangePicture(props) {
       </div>
 
       <div className="profile-picture-change">
-        <div className="profile-picture-change-img"></div>
+        <div
+          className="profile-picture-change-img"
+          style={{ backgroundImage: `url(${profileImageUrl})` }}
+        ></div>
         <div className="profile-picture-change-buttons">
           <button className="profile-picture-change-button">
             <i className="material-icons md-48">edit</i>
