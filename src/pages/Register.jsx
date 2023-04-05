@@ -1,17 +1,53 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../styles/Register.css";
 import Logo from "../components/Logo";
 
 export default function Register() {
   const [nome, setNome] = useState("");
-  const [curso, setCurso] = useState(0);
+  const [curso, setCurso] = useState("blank");
 
   const [email, setEmail] = useState("");
-  const [materia, setMateria] = useState("");
+  const [materia, setMateria] = useState("blank");
 
   const [senha, setSenha] = useState("");
   const [numero, setNumero] = useState("");
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    const curso_id = parseInt(curso);
+    const materia_id = parseInt(materia);
+
+    const response = await fetch("http://localhost:8080/monitores/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        nome,
+        senha,
+        email,
+        curso_id,
+        materia_id,
+        numero,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      localStorage.setItem("token", data.token);
+      setLoggedIn(true);
+    } else {
+      alert("Alguma coisa deu errado.");
+    }
+  };
+
+  if (loggedIn) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className="Register">
@@ -19,7 +55,7 @@ export default function Register() {
         <Logo />
       </nav>
 
-      <form className="register-form">
+      <form className="register-form" onSubmit={handleRegister}>
         <div className="register-header">
           <h1 className="register-header-title">Entre em contato ;)</h1>
           <p className="register-header-paragraph">
@@ -44,7 +80,15 @@ export default function Register() {
             <label htmlFor="curso" className="register-label">
               Curso *
             </label>
-            <select name="curso" id="curso" className="register-select-box">
+            <select
+              name="curso"
+              id="curso"
+              value={curso}
+              onChange={(e) => {
+                setCurso(e.target.value);
+              }}
+              className="register-select-box"
+            >
               <option value="blank"></option>
               <option value="1">Desenvolvimento de Sistemas</option>
             </select>
@@ -68,7 +112,15 @@ export default function Register() {
             <label htmlFor="materia" className="register-label">
               Matéria *
             </label>
-            <select name="materia" id="materia" className="register-select-box">
+            <select
+              name="materia"
+              id="materia"
+              value={materia}
+              className="register-select-box"
+              onChange={(e) => {
+                setMateria(e.target.value);
+              }}
+            >
               <option value="blank"></option>
               <option value="1">Introdução à Programação</option>
             </select>
@@ -93,7 +145,7 @@ export default function Register() {
               Número
             </label>
             <input
-              type="password"
+              type="text"
               id="numero"
               className="register-input-box"
               onChange={(e) => setNumero(e.target.value)}

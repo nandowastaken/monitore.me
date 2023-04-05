@@ -1,0 +1,24 @@
+.schedule {
+    font-family: "Inter", sans-serif;
+    border-collapse: collapse;
+    width: 970px;
+    height: 485px;
+}
+
+th {
+    width: 100px;
+}
+
+td {
+    height: 50px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
