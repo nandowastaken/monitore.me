@@ -18,6 +18,12 @@ export default function ChangePicture(props) {
       .catch((error) => console.error(error));
   }, []);
 
+  const handleUpload = (e) => {
+    const file = e.target.files[0];
+    console.log(file);
+    console.log("Arquivo selecionado:", file.name);
+  };
+
   return (
     <div className="ChangePicture">
       <div className="close">
@@ -44,10 +50,20 @@ export default function ChangePicture(props) {
           style={{ backgroundImage: `url(${profileImageUrl})` }}
         ></div>
         <div className="profile-picture-change-buttons">
-          <button className="profile-picture-change-button">
+          <button
+            className="profile-picture-change-button"
+            onClick={() => document.getElementById("file-input").click()}
+          >
             <i className="material-icons md-48">edit</i>
             Mudar
           </button>
+          <input
+            type="file"
+            id="file-input"
+            accept="image/*"
+            style={{ display: "none" }}
+            onChange={handleUpload}
+          />
 
           <button className="profile-picture-change-button">
             <i className="material-icons md-48">delete</i>
