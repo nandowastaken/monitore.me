@@ -18,6 +18,7 @@ export default function Homepage() {
   return (
     <div className="Homepage">
       <Navbar />
+
       <div className={visibleHeader ? "search" : "search active"}>
         <div className={visibleHeader ? "header" : "NotVisible"}>
           <h2 className="search-title">
