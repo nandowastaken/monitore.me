@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../styles/Homepage.css";
 import Navbar from "../components/Navbar";
+import Profile from "../components/Profile";
 import Schedule from "../components/Schedule";
 
 export default function Homepage() {
@@ -17,7 +18,6 @@ export default function Homepage() {
   return (
     <div className="Homepage">
       <Navbar />
-
       <div className={visibleHeader ? "search" : "search active"}>
         <div className={visibleHeader ? "header" : "NotVisible"}>
           <h2 className="search-title">
