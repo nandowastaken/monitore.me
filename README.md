@@ -57,5 +57,4 @@ Estarei informando a respeito do feedback dentro do campus quando informar aos c
 Este é um projeto que eu me orgulho de ter feito sozinho, desde a modelagem inicial, os wireframes, até o design final e a implementação. O design ficou no padrão Google, o que eu achei muito interessante para o projeto em si, e implementei o website em React.js e Express.js. 
 
 <br>
-<br>
-<p align="center">&copy; 2023 | Monitore-me.</p>
+<p align="center">&copy; 2023 Monitore-me.</p>
