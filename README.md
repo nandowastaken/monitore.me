@@ -34,8 +34,6 @@ Monitore-me é uma ideia antiga minha de quando eu era monitor de Introdução �
   <img src = "https://raw.githubusercontent.com/nandowastaken/icons-storage/main/monitore-me/Homepage.png" width=760>
 </p>
 
-<br>
-
 ## Features
 
 Algumas das coisas que você pode fazer com o Monitore-me.
