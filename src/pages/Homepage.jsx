@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Homepage.css";
 import Navbar from "../components/Navbar";
 import ProfileMenu from "../components/ProfileMenu";
@@ -9,6 +9,7 @@ export default function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isChangePictureOpen, setIsChangePictureOpen] = useState(false);
   const [visibleHeader, setVisibleHeader] = useState("true");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -26,9 +27,38 @@ export default function Homepage() {
     e.preventDefault();
   };
 
+  const checkTokenValidity = async () => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      const response = await fetch("http://localhost:8080/welcome", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ token }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setIsLoggedIn(true);
+      } else {
+        localStorage.removeItem("token");
+        setIsLoggedIn(false);
+      }
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
+
+  useEffect(() => {
+    checkTokenValidity();
+  }, []);
+
   return (
     <div className="Homepage">
-      <Navbar toggleMenu={toggleMenu} />
+      <Navbar toggleMenu={toggleMenu} isLoggedIn={isLoggedIn} />
       <div className="profile-menu-container">
         <ProfileMenu
           isVisible={isMenuOpen}
@@ -41,7 +71,10 @@ export default function Homepage() {
         style={{ display: isChangePictureOpen ? "flex" : "none" }}
       >
         <div className="black-screen"></div>
-        <ChangePicture toggleChangePicture={toggleChangePicture} />
+        <ChangePicture
+          toggleChangePicture={toggleChangePicture}
+          isVisible={isChangePictureOpen}
+        />
       </div>
 
       <div className={visibleHeader ? "search" : "search active"}>

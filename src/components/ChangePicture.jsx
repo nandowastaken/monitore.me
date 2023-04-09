@@ -6,22 +6,32 @@ export default function ChangePicture(props) {
   const [profileImageUrl, setProfileImageUrl] = useState("");
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const decodedToken = jwtDecode(token);
-    const userId = decodedToken.userId;
+    try {
+      const token = localStorage.getItem("token");
+      const decodedToken = jwtDecode(token);
+      const userId = decodedToken.userId;
 
-    fetch(`http://localhost:8080/monitores/${userId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(setProfileImageUrl(data[0].foto));
-      })
-      .catch((error) => console.error(error));
+      fetch(`http://localhost:8080/monitores/${userId}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(setProfileImageUrl(data[0].foto));
+        })
+        .catch((error) => console.error(error));
+    } catch {
+      console.log("It is not visible");
+    }
   }, []);
 
-  const handleUpload = (e) => {
+  const handleUpload = async (e) => {
+    e.preventDefault();
     const file = e.target.files[0];
-    console.log(file);
-    console.log("Arquivo selecionado:", file.name);
+    const formData = new FormData();
+    formData.append("file", file);
+
+    await fetch("http://localhost:8080/monitores/pic", {
+      method: "POST",
+      body: formData,
+    });
   };
 
   return (

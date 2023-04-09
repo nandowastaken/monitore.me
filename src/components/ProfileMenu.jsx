@@ -6,16 +6,20 @@ export default function ProfileMenu(props) {
   const [profileImageUrl, setProfileImageUrl] = useState("");
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const decodedToken = jwtDecode(token);
-    const userId = decodedToken.userId;
+    try {
+      const token = localStorage.getItem("token");
+      const decodedToken = jwtDecode(token);
+      const userId = decodedToken.userId;
 
-    fetch(`http://localhost:8080/monitores/${userId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(setProfileImageUrl(data[0].foto));
-      })
-      .catch((error) => console.error(error));
+      fetch(`http://localhost:8080/monitores/${userId}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(setProfileImageUrl(data[0].foto));
+        })
+        .catch((error) => console.error(error));
+    } catch {
+      console.log("It is not visible");
+    }
   }, []);
 
   return (
