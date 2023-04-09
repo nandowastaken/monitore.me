@@ -1,0 +1,18 @@
+.Footer {
+    width: 100vw;
+    height: 61px;
+    background-color: rgb(112, 117, 122, .05);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+}

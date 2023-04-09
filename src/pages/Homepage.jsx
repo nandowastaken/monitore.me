@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Homepage.css";
 import Navbar from "../components/Navbar";
+import Footer from "./Footer";
 import ProfileMenu from "../components/ProfileMenu";
 import Schedule from "../components/Schedule";
 import ChangePicture from "../components/ChangePicture";
@@ -128,6 +129,8 @@ export default function Homepage() {
 
         <Schedule visibleHeader={visibleHeader} />
       </div>
+
+      <Footer />
     </div>
   );
 }
