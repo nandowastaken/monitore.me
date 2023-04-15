@@ -22,6 +22,11 @@ export default function ProfileMenu(props) {
     }
   }, []);
 
+  const leaveAccount = () => {
+    localStorage.setItem("token", "");
+    location.reload();
+  };
+
   return (
     <div
       className="ProfileMenu"
@@ -47,7 +52,7 @@ export default function ProfileMenu(props) {
       </div>
 
       <button className="leave-button">
-        <div className="leave-content">
+        <div className="leave-content" onClick={leaveAccount}>
           <img src="src/assets/leave-icon.svg" alt="" className="leave-icon" />
           <p className="leave-text">Sair da conta</p>
         </div>
