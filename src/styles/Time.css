@@ -1,10 +1,7 @@
 .Time {
     position: absolute;
     background-color: rgb(3, 155, 229, 0.6);
-    height: 300px;
     width: 145px;
-    right: 808px;
-    top: 335px;
     border-radius: 0px 0px 10px 0px;
     display: flex;
     flex-direction: column;

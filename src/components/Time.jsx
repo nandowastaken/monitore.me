@@ -27,23 +27,23 @@ export default function Time(props) {
     switch (props.beginHour) {
       case "7:00":
       case "13:00":
-        yPosition = 335;
+        yPosition = 82;
         break;
       case "8:00":
       case "14:00":
-        yPosition = 400;
+        yPosition = 150;
         break;
       case "9:00":
       case "15:00":
-        yPosition = 465;
+        yPosition = 216;
         break;
       case "10:00":
       case "16:00":
-        yPosition = 530;
+        yPosition = 350;
         break;
       case "11:00":
       case "17:00":
-        yPosition = 595;
+        yPosition = 418;
         break;
     }
 
@@ -74,8 +74,8 @@ export default function Time(props) {
       style={{
         height: `${size}px`,
         display: props.hours == 0 ? "none" : "flex",
-        right: `${xPosition}px`,
-        top: `${yPosition}px`,
+        marginLeft: `${xPosition}px`,
+        marginTop: `${yPosition}px`,
       }}
     >
       <div className="header-time">

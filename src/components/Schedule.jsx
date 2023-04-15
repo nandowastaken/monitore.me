@@ -9,7 +9,7 @@ export default function Schedule(props) {
         materia="Introdução à Programação"
         monitor="Eliel Cirino"
         day="seg"
-        beginHour="7:00"
+        beginHour="10:00"
       />
       <Time
         hours={2}
