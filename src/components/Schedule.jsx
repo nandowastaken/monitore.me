@@ -4,11 +4,47 @@ import Time from "./Time";
 export default function Schedule(props) {
   return (
     <div className={props.visibleHeader ? "NotVisible" : "Schedule"}>
+      <Time
+        hours={2}
+        materia="Introdução à Programação"
+        monitor="Eliel Cirino"
+        day="seg"
+        beginHour="7:00"
+      />
+      <Time
+        hours={2}
+        materia="Introdução à Programação"
+        monitor="Eliel Cirino"
+        day="ter"
+        beginHour="7:00"
+      />
+      <Time
+        hours={2}
+        materia="Introdução à Programação"
+        monitor="Eliel Cirino"
+        day="qua"
+        beginHour="7:00"
+      />
+      <Time
+        hours={2}
+        materia="Introdução à Programação"
+        monitor="Eliel Cirino"
+        day="qui"
+        beginHour="7:00"
+      />
+      <Time
+        hours={2}
+        materia="Introdução à Programação"
+        monitor="Eliel Cirino"
+        day="sex"
+        beginHour="7:00"
+      />
       <table className="schedule">
         <tbody>
           <tr>
             <th className="schedule-column">Hora</th>
             <th className="schedule-column">Segunda</th>
+
             <th className="schedule-column">Terça</th>
             <th className="schedule-column">Quarta</th>
             <th className="schedule-column">Quinta</th>
