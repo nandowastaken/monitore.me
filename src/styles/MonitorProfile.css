@@ -1,0 +1,98 @@
+.MonitorProfile {
+    width: 445px;
+    height: 214px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-monitor-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-monitor-profile-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.header-monitor-profile-text-close {
+    cursor: pointer;
+}
+
+.info-monitor-profile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.info-monitor-profile-pic {
+    width: 113px;
+    height: 113px;
+    border-radius: 50%;
+    background-image: url('src/assets/cute-dog.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.info-monitor-name {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.info-monitor-email {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    color: #000000;
+}
+
+.monitor-phone-number {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    color: #000000;
+}
+
+.like-dislike {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.thumbs {
+    display: flex;
+    gap: 40px;
+}
+
+.thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.like-dislike-number {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+}

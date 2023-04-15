@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import ProfileMenu from "../components/ProfileMenu";
 import Schedule from "../components/Schedule";
 import ChangePicture from "../components/ChangePicture";
+import MonitorProfile from "../components/MonitorProfile";
 
 export default function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
