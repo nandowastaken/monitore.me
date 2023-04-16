@@ -100,7 +100,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .send-button-container {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: flex-end;
 }

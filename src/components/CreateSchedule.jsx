@@ -1,6 +1,11 @@
+import React, { useState } from "react";
+
 import "../styles/CreateSchedule.css";
 
 export default function CreateSchedule(props) {
+  const [beginHour, setBeginHour] = useState();
+  const [endHour, setEndHour] = useState();
+
   return (
     <div className="CreateSchedule">
       <div className="create-schedule-close">
@@ -25,8 +30,16 @@ export default function CreateSchedule(props) {
           src="https://raw.githubusercontent.com/nandowastaken/icons-storage/b5b79a1d86dc9e9bb142ced60ad90cda4086eba6/monitore-me/clock.svg"
           alt="Ícone de relógio."
         />
-        <input type="time" className="time-input" />
-        <input type="time" className="time-input" />
+        <input
+          type="time"
+          className="time-input"
+          onChange={(e) => setBeginHour(e.target.value)}
+        />
+        <input
+          type="time"
+          className="time-input"
+          onChange={(e) => setEndHour(e.target.value)}
+        />
       </div>
 
       <div className="other-info">
