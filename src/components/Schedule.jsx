@@ -2,6 +2,31 @@ import "../styles/Schedule.css";
 import Time from "./Time";
 
 export default function Schedule(props) {
+  let hour_1, hour_2, hour_3, hour_4, hour_5, hour_6;
+  const handleShift = () => {
+    switch (props.shift) {
+      case "matutino":
+      case "blank":
+        hour_1 = "7:00";
+        hour_2 = "8:00";
+        hour_3 = "9:00";
+        hour_4 = "10:00";
+        hour_5 = "11:00";
+        hour_6 = "12:00";
+        break;
+      case "vespertino":
+        hour_1 = "13:00";
+        hour_2 = "14:00";
+        hour_3 = "15:00";
+        hour_4 = "16:00";
+        hour_5 = "17:00";
+        hour_6 = "18:00";
+        break;
+    }
+  };
+
+  handleShift();
+
   return (
     <div className={props.visibleHeader ? "NotVisible" : "Schedule"}>
       <Time
@@ -52,7 +77,7 @@ export default function Schedule(props) {
           </tr>
 
           <tr>
-            <td className="schedule-row">7:00</td>
+            <td className="schedule-row">{hour_1}</td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
@@ -60,7 +85,7 @@ export default function Schedule(props) {
             <td className="schedule-row"></td>
           </tr>
           <tr>
-            <td className="schedule-row">8:00</td>
+            <td className="schedule-row">{hour_2}</td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
@@ -68,7 +93,7 @@ export default function Schedule(props) {
             <td className="schedule-row"></td>
           </tr>
           <tr>
-            <td className="schedule-row">9:00</td>
+            <td className="schedule-row">{hour_3}</td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
@@ -76,7 +101,7 @@ export default function Schedule(props) {
             <td className="schedule-row"></td>
           </tr>
           <tr>
-            <td className="schedule-row">10:00</td>
+            <td className="schedule-row">{hour_4}</td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
@@ -84,7 +109,7 @@ export default function Schedule(props) {
             <td className="schedule-row"></td>
           </tr>
           <tr>
-            <td className="schedule-row">11:00</td>
+            <td className="schedule-row">{hour_5}</td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
@@ -92,7 +117,7 @@ export default function Schedule(props) {
             <td className="schedule-row"></td>
           </tr>
           <tr>
-            <td className="schedule-row">12:00</td>
+            <td className="schedule-row">{hour_6}</td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>
             <td className="schedule-row"></td>

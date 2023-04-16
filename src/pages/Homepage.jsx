@@ -13,6 +13,7 @@ export default function Homepage() {
   const [isChangePictureOpen, setIsChangePictureOpen] = useState(false);
   const [visibleHeader, setVisibleHeader] = useState("true");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [shift, setShift] = useState("matutino");
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -113,7 +114,12 @@ export default function Homepage() {
             <label htmlFor="turno" className="label">
               Turno
             </label>
-            <select name="turno" id="turno" className="select-box">
+            <select
+              name="turno"
+              id="turno"
+              className="select-box"
+              onChange={(e) => setShift(e.target.value)}
+            >
               <option value="blank"></option>
               <option value="matutino">Matutino</option>
               <option value="vespertino">Vespertino</option>
@@ -129,7 +135,7 @@ export default function Homepage() {
           </button>
         </form>
 
-        <Schedule visibleHeader={visibleHeader} />
+        <Schedule visibleHeader={visibleHeader} shift={shift} />
       </div>
 
       <Footer />
