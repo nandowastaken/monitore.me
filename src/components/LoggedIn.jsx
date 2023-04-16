@@ -24,6 +24,7 @@ export default function LoggedIn(props) {
         src="src/assets/addSchedule.svg"
         alt="Botão para adicionar horário."
         className="add-schedule-button"
+        onClick={props.toggleCreateSchedule}
       />
       <div
         className="profile-picture"

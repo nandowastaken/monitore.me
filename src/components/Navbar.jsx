@@ -14,7 +14,10 @@ export default function Navbar(props) {
 
       <div className="profile-container">
         {props.isLoggedIn ? (
-          <LoggedIn toggleMenu={props.toggleMenu} />
+          <LoggedIn
+            toggleMenu={props.toggleMenu}
+            toggleCreateSchedule={props.toggleCreateSchedule}
+          />
         ) : (
           <NotLoggedIn />
         )}

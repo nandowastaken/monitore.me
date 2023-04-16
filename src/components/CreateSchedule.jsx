@@ -1,12 +1,13 @@
 import "../styles/CreateSchedule.css";
 
-export default function CreateSchedule() {
+export default function CreateSchedule(props) {
   return (
     <div className="CreateSchedule">
       <div className="create-schedule-close">
         <img
           src="https://raw.githubusercontent.com/nandowastaken/icons-storage/a4f13def7f357c307ead6b23e13db31d546080dd/monitore-me/close.svg"
           alt="Fechar o cadastro de horário"
+          onClick={props.toggleCreateSchedule}
         />
       </div>
 

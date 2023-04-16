@@ -10,6 +10,7 @@ import CreateSchedule from "../components/CreateSchedule";
 
 export default function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCreateScheduleOpen, setIsCreateScheduleOpen] = useState(false);
   const [isChangePictureOpen, setIsChangePictureOpen] = useState(false);
   const [visibleHeader, setVisibleHeader] = useState("true");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,6 +26,10 @@ export default function Homepage() {
 
   function toggleHeader() {
     setVisibleHeader(false);
+  }
+
+  function toggleCreateSchedule() {
+    setIsCreateScheduleOpen(!isCreateScheduleOpen);
   }
 
   const handleSearch = (e) => {
@@ -62,7 +67,11 @@ export default function Homepage() {
 
   return (
     <div className="Homepage">
-      <Navbar toggleMenu={toggleMenu} isLoggedIn={isLoggedIn} />
+      <Navbar
+        toggleMenu={toggleMenu}
+        isLoggedIn={isLoggedIn}
+        toggleCreateSchedule={toggleCreateSchedule}
+      />
       <div className="profile-menu-container">
         <ProfileMenu
           isVisible={isMenuOpen}
@@ -79,6 +88,14 @@ export default function Homepage() {
           toggleChangePicture={toggleChangePicture}
           isVisible={isChangePictureOpen}
         />
+      </div>
+
+      <div
+        className="create-schedule-container"
+        style={{ display: isCreateScheduleOpen ? "flex" : "none" }}
+      >
+        <div className="black-screen"></div>
+        <CreateSchedule toggleCreateSchedule={toggleCreateSchedule} />
       </div>
 
       <div className={visibleHeader ? "search" : "search active"}>
