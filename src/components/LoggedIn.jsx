@@ -19,7 +19,7 @@ export default function LoggedIn(props) {
   }, []);
 
   return (
-    <div className="LoggedIn" onClick={props.toggleMenu}>
+    <div className="LoggedIn">
       <img
         src="src/assets/addSchedule.svg"
         alt="Botão para adicionar horário."
@@ -27,6 +27,7 @@ export default function LoggedIn(props) {
       />
       <div
         className="profile-picture"
+        onClick={props.toggleMenu}
         style={{ backgroundImage: `url(${profileImageUrl})` }}
       ></div>
     </div>
