@@ -30,11 +30,11 @@ export default function Schedule(props) {
   return (
     <div className={props.visibleHeader ? "NotVisible" : "Schedule"}>
       <Time
-        hours={2}
+        hours={1}
         materia="Introdução à Programação"
         monitor="Eliel Cirino"
         day="seg"
-        beginHour="10:00"
+        beginHour="7:00"
       />
       <Time
         hours={2}
@@ -44,21 +44,21 @@ export default function Schedule(props) {
         beginHour="7:00"
       />
       <Time
-        hours={2}
+        hours={3}
         materia="Introdução à Programação"
         monitor="Eliel Cirino"
         day="qua"
         beginHour="7:00"
       />
       <Time
-        hours={2}
+        hours={4}
         materia="Introdução à Programação"
         monitor="Eliel Cirino"
         day="qui"
         beginHour="7:00"
       />
       <Time
-        hours={2}
+        hours={5}
         materia="Introdução à Programação"
         monitor="Eliel Cirino"
         day="sex"

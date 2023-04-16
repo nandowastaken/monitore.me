@@ -4,22 +4,24 @@ export default function Time(props) {
   let xPosition;
   let yPosition;
   let size;
+  let materiaFontSize;
+  let monitorNameSize;
 
   const handlePosition = () => {
     switch (props.day) {
-      case "seg":
+      case "sex":
         xPosition = 808;
         break;
-      case "ter":
+      case "qui":
         xPosition = 646;
         break;
       case "qua":
         xPosition = 485;
         break;
-      case "qui":
+      case "ter":
         xPosition = 323;
         break;
-      case "sex":
+      case "seg":
         xPosition = 162;
         break;
     }
@@ -50,6 +52,8 @@ export default function Time(props) {
     switch (props.hours) {
       case 1:
         size = 60;
+        materiaFontSize = 16;
+        monitorNameSize = 12;
         break;
       case 2:
         size = 125;
@@ -79,13 +83,24 @@ export default function Time(props) {
       }}
     >
       <div className="header-time">
-        <div className="materia">{props.materia}</div>
+        <div className="materia" style={{ fontSize: `${materiaFontSize}px` }}>
+          {props.materia}
+        </div>
         <div className="time">{props.time}</div>
       </div>
 
       <div className="monitor">
-        <p className="monitor-paragraph">Monitor:</p>
-        <a href="" className="monitor-name">
+        <p
+          className="monitor-paragraph"
+          style={{ display: props.hours == 1 ? "none" : "block" }}
+        >
+          Monitor:
+        </p>
+        <a
+          href=""
+          className="monitor-name"
+          style={{ fontSize: `${monitorNameSize}px` }}
+        >
           {props.monitor}
         </a>
       </div>
