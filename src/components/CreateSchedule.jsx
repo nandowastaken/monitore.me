@@ -1,10 +1,25 @@
 import React, { useState } from "react";
 
 import "../styles/CreateSchedule.css";
+import ScheduleInfo from "./ScheduleInfo";
 
 export default function CreateSchedule(props) {
-  const [beginHour, setBeginHour] = useState();
-  const [endHour, setEndHour] = useState();
+  const [day, setDay] = useState("Segunda");
+
+  const [segBeginHour, setSegBeghinHour] = useState("00:00");
+  const [segEndHour, setSegEndHour] = useState("00:00");
+
+  const [terBeginHour, setTerBeghinHour] = useState("00:00");
+  const [terEndHour, setTerEndHour] = useState("00:00");
+
+  const [quaBeginHour, setQuaBeghinHour] = useState("00:00");
+  const [quaEndHour, setQuaEndHour] = useState("00:00");
+
+  const [quiBeginHour, setQuiBeghinHour] = useState("00:00");
+  const [quiEndHour, setQuiEndHour] = useState("00:00");
+
+  const [sexBeginHour, setSexBeghinHour] = useState("00:00");
+  const [sexEndHour, setSexEndHour] = useState("00:00");
 
   return (
     <div className="CreateSchedule">
@@ -18,43 +33,81 @@ export default function CreateSchedule(props) {
 
       <h1 className="create-schedule-title">Cadastrar horário</h1>
       <div className="weekdays">
-        <button className="weekdays-button">Segunda</button>
-        <button className="weekdays-button">Terça</button>
-        <button className="weekdays-button">Quarta</button>
-        <button className="weekdays-button">Quinta</button>
-        <button className="weekdays-button">Sexta</button>
+        <button className="weekdays-button" onClick={() => setDay("Segunda")}>
+          Segunda
+        </button>
+
+        <button className="weekdays-button" onClick={() => setDay("Terça")}>
+          Terça
+        </button>
+
+        <button className="weekdays-button" onClick={() => setDay("Quarta")}>
+          Quarta
+        </button>
+
+        <button className="weekdays-button" onClick={() => setDay("Quinta")}>
+          Quinta
+        </button>
+
+        <button className="weekdays-button" onClick={() => setDay("Sexta")}>
+          Sexta
+        </button>
       </div>
 
-      <div className="select-time">
-        <img
-          src="https://raw.githubusercontent.com/nandowastaken/icons-storage/b5b79a1d86dc9e9bb142ced60ad90cda4086eba6/monitore-me/clock.svg"
-          alt="Ícone de relógio."
+      {day == "Segunda" ? (
+        <ScheduleInfo
+          beginHour={segBeginHour}
+          endHour={segEndHour}
+          setBeginHour={setSegBeghinHour}
+          setEndHour={setSegEndHour}
         />
-        <input
-          type="time"
-          className="time-input"
-          onChange={(e) => setBeginHour(e.target.value)}
-        />
-        <input
-          type="time"
-          className="time-input"
-          onChange={(e) => setEndHour(e.target.value)}
-        />
-      </div>
+      ) : (
+        <></>
+      )}
 
-      <div className="other-info">
-        <img
-          src="https://raw.githubusercontent.com/nandowastaken/icons-storage/b8082858246c275b328c8ba7880ab74099fb68c4/monitore-me/location.svg"
-          alt="Ícone de localização."
+      {day == "Terça" ? (
+        <ScheduleInfo
+          beginHour={terBeginHour}
+          endHour={terEndHour}
+          setBeginHour={setTerBeghinHour}
+          setEndHour={setTerEndHour}
         />
+      ) : (
+        <></>
+      )}
 
-        <input type="text" className="location" />
+      {day == "Quarta" ? (
+        <ScheduleInfo
+          beginHour={quaBeginHour}
+          endHour={quaEndHour}
+          setBeginHour={setQuaBeghinHour}
+          setEndHour={setQuaEndHour}
+        />
+      ) : (
+        <></>
+      )}
 
-        <div className="dont-work-today">
-          <input type="checkbox" className="dont-work-today-box" />
-          <p className="dont-work-today-text">Não trabalho neste dia.</p>
-        </div>
-      </div>
+      {day == "Quinta" ? (
+        <ScheduleInfo
+          beginHour={quiBeginHour}
+          endHour={quiEndHour}
+          setBeginHour={setQuiBeghinHour}
+          setEndHour={setQuiEndHour}
+        />
+      ) : (
+        <></>
+      )}
+
+      {day == "Sexta" ? (
+        <ScheduleInfo
+          beginHour={sexBeginHour}
+          endHour={sexEndHour}
+          setBeginHour={setSexBeghinHour}
+          setEndHour={setSexEndHour}
+        />
+      ) : (
+        <></>
+      )}
 
       <div className="send-button-container">
         <button className="send-button">Enviar</button>

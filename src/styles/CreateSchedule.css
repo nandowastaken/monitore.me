@@ -13,7 +13,8 @@
 }
 
 .create-schedule-close {
-    width: 100%;
+    width: 95%;
+    margin-top: 10px;
     display: flex;
     justify-content: flex-end;
     cursor: pointer;
