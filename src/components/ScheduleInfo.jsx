@@ -26,10 +26,20 @@ export default function ScheduleInfo(props) {
           alt="Ícone de localização."
         />
 
-        <input type="text" className="location" />
+        <input
+          type="text"
+          className="location"
+          defaultValue={props.localizacao}
+          onChange={(e) => props.setLocalizacao(e.target.value)}
+        />
 
         <div className="dont-work-today">
-          <input type="checkbox" className="dont-work-today-box" />
+          <input
+            type="checkbox"
+            className="dont-work-today-box"
+            defaultChecked={props.NotWorkDay}
+            onChange={() => props.setNotWorkDay(!props.NotWorkDay)}
+          />
           <p className="dont-work-today-text">Não trabalho neste dia.</p>
         </div>
       </div>

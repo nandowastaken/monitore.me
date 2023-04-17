@@ -86,6 +86,17 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     width: 92%;
 }
 
+.location {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 275;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.5);
+
+    border: none;
+}
+
 .dont-work-today {
     display: flex;
     align-items: center;

@@ -8,18 +8,28 @@ export default function CreateSchedule(props) {
 
   const [segBeginHour, setSegBeghinHour] = useState("00:00");
   const [segEndHour, setSegEndHour] = useState("00:00");
+  const [segLocalizacao, setSegLocalizacao] = useState("Ex: Lab 10 de Info.");
+  const [segNotWorkDay, setSegNotWorkDay] = useState(false);
 
   const [terBeginHour, setTerBeghinHour] = useState("00:00");
   const [terEndHour, setTerEndHour] = useState("00:00");
+  const [terLocalizacao, setTerLocalizacao] = useState("Ex: Lab 10 de Info.");
+  const [terNotWorkDay, setTerNotWorkDay] = useState(false);
 
   const [quaBeginHour, setQuaBeghinHour] = useState("00:00");
   const [quaEndHour, setQuaEndHour] = useState("00:00");
+  const [quaLocalizacao, setQuaLocalizacao] = useState("Ex: Lab 10 de Info.");
+  const [quaNotWorkDay, setQuaNotWorkDay] = useState(false);
 
   const [quiBeginHour, setQuiBeghinHour] = useState("00:00");
   const [quiEndHour, setQuiEndHour] = useState("00:00");
+  const [quiLocalizacao, setQuiLocalizacao] = useState("Ex: Lab 10 de Info.");
+  const [quiNotWorkDay, setQuiNotWorkDay] = useState(false);
 
   const [sexBeginHour, setSexBeghinHour] = useState("00:00");
   const [sexEndHour, setSexEndHour] = useState("00:00");
+  const [sexLocalizacao, setSexLocalizacao] = useState("Ex: Lab 10 de Info.");
+  const [sexNotWorkDay, setSexNotWorkDay] = useState(false);
 
   return (
     <div className="CreateSchedule">
@@ -58,8 +68,12 @@ export default function CreateSchedule(props) {
         <ScheduleInfo
           beginHour={segBeginHour}
           endHour={segEndHour}
+          localizacao={segLocalizacao}
+          setLocalizacao={setSegLocalizacao}
           setBeginHour={setSegBeghinHour}
           setEndHour={setSegEndHour}
+          NotWorkDay={segNotWorkDay}
+          setNotWorkDay={setSegNotWorkDay}
         />
       ) : (
         <></>
@@ -69,8 +83,12 @@ export default function CreateSchedule(props) {
         <ScheduleInfo
           beginHour={terBeginHour}
           endHour={terEndHour}
+          localizacao={terLocalizacao}
+          setLocalizacao={setTerLocalizacao}
           setBeginHour={setTerBeghinHour}
           setEndHour={setTerEndHour}
+          NotWorkDay={terNotWorkDay}
+          setNotWorkDay={setTerNotWorkDay}
         />
       ) : (
         <></>
@@ -80,8 +98,12 @@ export default function CreateSchedule(props) {
         <ScheduleInfo
           beginHour={quaBeginHour}
           endHour={quaEndHour}
+          localizacao={quaLocalizacao}
+          setLocalizacao={setQuaLocalizacao}
           setBeginHour={setQuaBeghinHour}
           setEndHour={setQuaEndHour}
+          NotWorkDay={quaNotWorkDay}
+          setNotWorkDay={setQuaNotWorkDay}
         />
       ) : (
         <></>
@@ -91,8 +113,12 @@ export default function CreateSchedule(props) {
         <ScheduleInfo
           beginHour={quiBeginHour}
           endHour={quiEndHour}
+          localizacao={quiLocalizacao}
+          setLocalizacao={setQuiLocalizacao}
           setBeginHour={setQuiBeghinHour}
           setEndHour={setQuiEndHour}
+          NotWorkDay={quiNotWorkDay}
+          setNotWorkDay={setQuiNotWorkDay}
         />
       ) : (
         <></>
@@ -102,8 +128,12 @@ export default function CreateSchedule(props) {
         <ScheduleInfo
           beginHour={sexBeginHour}
           endHour={sexEndHour}
+          localizacao={sexLocalizacao}
+          setLocalizacao={setSexLocalizacao}
           setBeginHour={setSexBeghinHour}
           setEndHour={setSexEndHour}
+          NotWorkDay={sexNotWorkDay}
+          setNotWorkDay={setSexNotWorkDay}
         />
       ) : (
         <></>
