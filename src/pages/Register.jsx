@@ -19,8 +19,8 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    const curso_id = parseInt(curso);
-    const materia_id = parseInt(materia);
+    const cursoId = parseInt(curso);
+    const materiaId = parseInt(materia);
 
     const response = await fetch("http://localhost:8080/monitores/register", {
       method: "POST",
@@ -29,8 +29,8 @@ export default function Register() {
         nome,
         senha,
         email,
-        curso_id,
-        materia_id,
+        cursoId,
+        materiaId,
         numero,
       }),
     });
