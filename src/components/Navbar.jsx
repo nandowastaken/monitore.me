@@ -6,8 +6,6 @@ import LoggedIn from "./LoggedIn";
 import "../styles/Navbar.css";
 
 export default function Navbar(props) {
-  const [userPhoto, setUserPhoto] = useState("");
-
   return (
     <nav className="navbar">
       <Logo />
@@ -17,6 +15,7 @@ export default function Navbar(props) {
           <LoggedIn
             toggleMenu={props.toggleMenu}
             toggleCreateSchedule={props.toggleCreateSchedule}
+            profileImageUrl={props.profileImageUrl}
           />
         ) : (
           <NotLoggedIn />

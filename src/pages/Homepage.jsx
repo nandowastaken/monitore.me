@@ -7,6 +7,7 @@ import Schedule from "../components/Schedule";
 import ChangePicture from "../components/ChangePicture";
 import MonitorProfile from "../components/MonitorProfile";
 import CreateSchedule from "../components/CreateSchedule";
+import jwtDecode from "jwt-decode";
 
 export default function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +16,8 @@ export default function Homepage() {
   const [visibleHeader, setVisibleHeader] = useState("true");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [shift, setShift] = useState("matutino");
+  const [monitorData, setMonitorData] = useState({});
+  const [profileImageUrl, setProfileImageUrl] = useState("");
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -34,6 +37,17 @@ export default function Homepage() {
 
   const handleSearch = (e) => {
     e.preventDefault();
+  };
+
+  const getMonitorData = async () => {
+    const token = localStorage.getItem("token");
+    const decodedToken = jwtDecode(token);
+    const userId = decodedToken.userId;
+
+    const response = await fetch(`http://localhost:8080/monitores/${userId}`);
+    const monitor = await response.json();
+    setMonitorData(monitor);
+    setProfileImageUrl(monitor[0].foto);
   };
 
   const checkTokenValidity = async () => {
@@ -63,6 +77,7 @@ export default function Homepage() {
 
   useEffect(() => {
     checkTokenValidity();
+    getMonitorData();
   }, []);
 
   return (
@@ -71,6 +86,7 @@ export default function Homepage() {
         toggleMenu={toggleMenu}
         isLoggedIn={isLoggedIn}
         toggleCreateSchedule={toggleCreateSchedule}
+        profileImageUrl={profileImageUrl}
       />
       <div className="profile-menu-container">
         <ProfileMenu
@@ -87,6 +103,7 @@ export default function Homepage() {
         <ChangePicture
           toggleChangePicture={toggleChangePicture}
           isVisible={isChangePictureOpen}
+          profileImageUrl={profileImageUrl}
         />
       </div>
 
