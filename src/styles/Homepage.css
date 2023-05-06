@@ -138,3 +138,47 @@
     cursor: pointer;
 
 }
+
+@media only screen and (max-width: 540px) {
+    .search-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .search-paragraph {
+        font-size: 20px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .select-box, .search-button {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .search {
+        gap: 30px;
+    }
+
+    .search-title {
+        font-size: 24px;
+    }
+
+    .search-paragraph {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .select-box, .search-button {
+        width: 240px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+}

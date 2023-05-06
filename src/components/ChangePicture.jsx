@@ -7,6 +7,21 @@ export default function ChangePicture(props) {
     e.preventDefault();
     const file = e.target.files[0];
     console.log(file);
+
+    const response = await fetch(
+      "https://www.googleapis.com/upload/drive/v3/files?uploadType=media",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "image",
+          "Content-Length": "5000000",
+        },
+        body: file,
+      }
+    );
+
+    const result = response.json();
+    console.log(result);
   };
 
   return (
