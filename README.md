@@ -44,6 +44,12 @@ Algumas das coisas que você pode fazer com o Monitore-me.
 * Sair da sua conta.
 * Permitir avaliar o serviço dos monitores cadastrados.
 
+## Proposta de Uso
+
+<p>O monitore.me tem um design simples, onde o aluno, assim que entrar no site, pode pesquisar o horário de um monitor de uma matéria e de um turno. O monitor pode se cadastrar no website, cadastrar seu horário, e então este horário estará visível dentre os possíveis resultados de pesquisa dos alunos. É feito para ser da forma mais intuitiva possível, de modo a não gerar confusão, nem escalar um projeto simples.</p>
+
+<p>Qualquer dispositivo, ao achar o horário de um monitor, pode clicar em seu nome, para abrir o perfil deste monitor, deste modo, ele pode ver algumas informações básicas, como seu contato. Também é possível avaliar o monitor com likes e dislikes, sem a necessidade de ter uma conta. Para evitar quantidades massivas e desiguais de likes e dislikes, cada dispositivo tem um limite de 5 ações, sendo um like ou um dislike. Claro que alguém ainda pode acessar outros dispositivos para votar mais do que o permitido, mas, se ele teve o esforço para tal, acredito que seria ainda mais fácil ter o esforço de criar uma outra conta. Assim, pode-se criar um método para avaliar monitores de certo modo "confiável".</p>
+
 ## Feedback
 
 Estarei informando a respeito do feedback dentro do campus quando informar aos coordenadores sobre a existência do website e se eles gostariam de utilizar ou não.
