@@ -42,6 +42,7 @@ Algumas das coisas que você pode fazer com o Monitore-me.
 * Fazer login como monitor.
 * Trocar foto de perfil. 
 * Sair da sua conta.
+* Permitir avaliar o serviço dos monitores cadastrados.
 
 ## Feedback
 
