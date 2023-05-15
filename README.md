@@ -44,11 +44,16 @@ Algumas das coisas que você pode fazer com o Monitore-me.
 * Sair da sua conta.
 * Permitir avaliar o serviço dos monitores cadastrados.
 
-## Proposta de Uso
+## Casos de Uso
 
-<p>O monitore.me tem um design simples, onde o aluno, assim que entrar no site, pode pesquisar o horário de um monitor de uma matéria e de um turno. O monitor pode se cadastrar no website, cadastrar seu horário, e então este horário estará visível dentre os possíveis resultados de pesquisa dos alunos. É feito para ser da forma mais intuitiva possível, de modo a não gerar confusão, nem escalar um projeto simples.</p>
+<strong>Aluno.</strong>
+<p>O principal usuário final do Monitore.me é o aluno, alguém que vai usar o site para procurar o horário atual dos monitores de sua disciplina para um turno (matutino ou vespertino). Para ele ter acesso a isso, basta ele entrar no website, preencher as informações da matéria, e então clicar em pesquisar, o horário do monitor encontrado será retornado na tela principal</p>
 
-<p>Qualquer dispositivo, ao achar o horário de um monitor, pode clicar em seu nome, para abrir o perfil deste monitor, deste modo, ele pode ver algumas informações básicas, como seu contato. Também é possível avaliar o monitor com likes e dislikes, sem a necessidade de ter uma conta. Para evitar quantidades massivas e desiguais de likes e dislikes, cada dispositivo tem um limite de 5 ações, sendo um like ou um dislike. Claro que alguém ainda pode acessar outros dispositivos para votar mais do que o permitido, mas, se ele teve o esforço para tal, acredito que seria ainda mais fácil ter o esforço de criar uma outra conta. Assim, pode-se criar um método para avaliar monitores de certo modo "confiável".</p>
+<strong>Monitor.</strong>
+<p>O monitor vai poder utilizar do website para facilitar a divulgação de sua monitoria, evitando a carência de pessoas que não estão cientes de que ele está disponível em um certo horário. Para o monitor, ele necessita criar uma conta, e então cadastrar seu horário. Tudo isso é bem intuitivo devido à interface minimalista e intuitiva do Monitore.me.</p>
+
+<strong>Todos.</strong>
+<p>Qualquer pessoa pode avaliar um monitor, com likes ou dislikes, tendo um limite de 5 na semana (5 ao total contando com ambos, ou seja, se der 3 dislikes, só poderá dar 2 likes, ao invés de 5). Para manter esse limite, será criado uma limitação com base no dispositivo, ao invés de uma conta.</p>
 
 ## Feedback
 
