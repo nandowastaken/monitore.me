@@ -42,6 +42,18 @@ Algumas das coisas que você pode fazer com o Monitore-me.
 * Fazer login como monitor.
 * Trocar foto de perfil. 
 * Sair da sua conta.
+* Permitir avaliar o serviço dos monitores cadastrados.
+
+## Casos de Uso
+
+<strong>Aluno.</strong>
+<p>O principal usuário final do Monitore.me é o aluno, alguém que vai usar o site para procurar o horário atual dos monitores de sua disciplina para um turno (matutino ou vespertino). Para ele ter acesso a isso, basta ele entrar no website, preencher as informações da matéria, e então clicar em pesquisar, o horário do monitor encontrado será retornado na tela principal</p>
+
+<strong>Monitor.</strong>
+<p>O monitor vai poder utilizar do website para facilitar a divulgação de sua monitoria, evitando a carência de pessoas que não estão cientes de que ele está disponível em um certo horário. Para o monitor, ele necessita criar uma conta, e então cadastrar seu horário. Tudo isso é bem intuitivo devido à interface minimalista e intuitiva do Monitore.me.</p>
+
+<strong>Todos.</strong>
+<p>Qualquer pessoa pode avaliar um monitor, com likes ou dislikes, tendo um limite de 5 na semana (5 ao total contando com ambos, ou seja, se der 3 dislikes, só poderá dar 2 likes, ao invés de 5). Para manter esse limite, será criado uma limitação com base no dispositivo, ao invés de uma conta.</p>
 
 ## Feedback
 
