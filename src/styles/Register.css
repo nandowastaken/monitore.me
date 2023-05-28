@@ -85,3 +85,77 @@
 
     cursor: pointer;
 }
+
+@media only screen and (max-width: 820px) {
+    .register-header {
+        width: 100%;
+    }
+
+    .register-header-paragraph, .register-header-title {
+        text-align: center;
+    }
+
+    .register-form {
+        gap: 30px;
+    }
+
+    .inputs-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .register-button {
+        width: 361.11px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .register-header-title {
+        font-size: 24px;
+    }
+
+    .register-header-paragraph {
+        font-size: 20px;
+    }
+
+    .register-form, .inputs-container {
+        gap: 18px;
+    }
+
+    .register-input-box, .register-select-box {
+        height: 35px;
+        width: 340px;
+    }
+
+    .register-button {
+        font-size: 28px;
+        height: 35px;
+        width: 340px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .register-header-title {
+        font-size: 20px;
+    }
+
+    .register-header-paragraph {
+        font-size: 16px;
+    }
+
+    .register-form, .inputs-container {
+        gap: 20px;
+    }
+
+    .register-input-box, .register-select-box {
+        height: 30px;
+        width: 260px;
+    }
+
+    .register-button {
+        height: 30px;
+        font-size: 20px;
+        width: 260px;
+
+    }
+}
