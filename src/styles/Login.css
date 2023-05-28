@@ -105,3 +105,31 @@
         text-align: center;
     }
 }
+
+@media only screen and (max-width: 360px) {
+    .input-box {
+        width: 340px;
+    }
+
+    .login-button {
+        width: 340px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .welcomeback {
+        font-size: 20px;
+    }
+
+    .welcome-paragraph {
+        font-size: 16px;
+    }
+
+    .input-box {
+        width: 260px;
+    }
+
+    .login-button {
+        width: 260px;
+    }
+}
