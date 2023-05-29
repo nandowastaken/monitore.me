@@ -31,6 +31,34 @@ export default function CreateSchedule(props) {
   const [sexLocalizacao, setSexLocalizacao] = useState("Ex: Lab 10 de Info.");
   const [sexNotWorkDay, setSexNotWorkDay] = useState(false);
 
+  function deactivateButtons(event) {
+    const id = event.target.id;
+
+    // Removes the element that is clicking to remove the background color blue style from the others
+    let ids = ["button-1", "button-2", "button-3", "button-4", "button-5"];
+    let idIndex = ids.indexOf(id);
+    delete ids[idIndex];
+
+    for (let i = 0; i < ids.length; i++) {
+      if (ids[i] == undefined) {
+        continue;
+      }
+
+      document.getElementById(ids[i]).style.backgroundColor = "white";
+      document.getElementById(ids[i]).style.color = "black";
+    }
+  }
+
+  function toggleDay(event, day) {
+    setDay(day);
+
+    const id = event.target.id;
+    document.getElementById(id).style.backgroundColor = "#e8f0fe";
+    document.getElementById(id).style.color = "#2d6cdf";
+
+    deactivateButtons(event);
+  }
+
   return (
     <div className="CreateSchedule">
       <div className="create-schedule-close">
@@ -43,23 +71,43 @@ export default function CreateSchedule(props) {
 
       <h1 className="create-schedule-title">Cadastrar horário</h1>
       <div className="weekdays">
-        <button className="weekdays-button" onClick={() => setDay("Segunda")}>
+        <button
+          className="weekdays-button"
+          id="button-1"
+          onClick={(e) => toggleDay(e, "Segunda")}
+        >
           Segunda
         </button>
 
-        <button className="weekdays-button" onClick={() => setDay("Terça")}>
+        <button
+          className="weekdays-button"
+          id="button-2"
+          onClick={(e) => toggleDay(e, "Terça")}
+        >
           Terça
         </button>
 
-        <button className="weekdays-button" onClick={() => setDay("Quarta")}>
+        <button
+          className="weekdays-button"
+          id="button-3"
+          onClick={(e) => toggleDay(e, "Quarta")}
+        >
           Quarta
         </button>
 
-        <button className="weekdays-button" onClick={() => setDay("Quinta")}>
+        <button
+          className="weekdays-button"
+          id="button-4"
+          onClick={(e) => toggleDay(e, "Quinta")}
+        >
           Quinta
         </button>
 
-        <button className="weekdays-button" onClick={() => setDay("Sexta")}>
+        <button
+          className="weekdays-button"
+          id="button-5"
+          onClick={(e) => toggleDay(e, "Sexta")}
+        >
           Sexta
         </button>
       </div>

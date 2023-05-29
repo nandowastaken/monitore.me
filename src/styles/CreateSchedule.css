@@ -54,8 +54,7 @@
 }
 
 .weekdays-button:hover {
-    color: #0085FF;
-    background-color: rgba(40, 152, 255, 0.13);
+    background-color: rgba(40, 41, 43, 0.13);
 }
 
 .select-time {
