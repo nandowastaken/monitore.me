@@ -10,7 +10,7 @@ export default function Footer() {
           target="blank"
           className="copyright"
         >
-          Fernando Jorge.
+          <strong>Fernando Jorge.</strong>
         </a>
       </p>
     </div>

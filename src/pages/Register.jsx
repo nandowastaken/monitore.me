@@ -91,6 +91,12 @@ export default function Register() {
             >
               <option value="blank"></option>
               <option value="1">Desenvolvimento de Sistemas</option>
+              <option value="2">Estradas</option>
+              <option value="3">Química</option>
+              <option value="4">Eletrônica</option>
+              <option value="5">Eletrotécnica</option>
+              <option value="6">Edificações</option>
+              <option value="7">Mecânica</option>
             </select>
           </div>
         </div>

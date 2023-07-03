@@ -1,27 +1,7 @@
-import React, { useState, useEffect } from "react";
-import jwtDecode from "jwt-decode";
+import React from "react";
 import "../styles/ProfileMenu.css";
 
 export default function ProfileMenu(props) {
-  const [profileImageUrl, setProfileImageUrl] = useState("");
-
-  useEffect(() => {
-    try {
-      const token = localStorage.getItem("token");
-      const decodedToken = jwtDecode(token);
-      const userId = decodedToken.userId;
-
-      fetch(`http://localhost:8080/monitores/${userId}`)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(setProfileImageUrl(data[0].foto));
-        })
-        .catch((error) => console.error(error));
-    } catch {
-      console.log("It is not visible");
-    }
-  }, []);
-
   const leaveAccount = () => {
     localStorage.setItem("token", "");
     location.reload();
@@ -36,7 +16,7 @@ export default function ProfileMenu(props) {
         <div className="profile-menu-img-container">
           <div
             className="profile-menu-img"
-            style={{ backgroundImage: `url(${profileImageUrl})` }}
+            style={{ backgroundImage: `url(${props.monitor.foto})` }}
           >
             <button className="change-icon" onClick={props.toggleChangePicture}>
               <img src="src/assets/camera-icon.svg" alt="" />
@@ -44,10 +24,11 @@ export default function ProfileMenu(props) {
           </div>
         </div>
 
-        <p className="profile-menu-name">Fernando Jorge</p>
-        <p className="profile-menu-email">
-          fernandojorge.cavalcantegomes@gmail.com
-        </p>
+        <div className="name-email-container">
+          <p className="profile-menu-name">{props.monitor.nome}</p>
+          <p className="profile-menu-email">{props.monitor.email}</p>
+        </div>
+
         <button className="go-to-profile">Seu perfil</button>
       </div>
 

@@ -46,7 +46,7 @@ export default function Homepage() {
 
     const response = await fetch(`http://localhost:8080/monitores/${userId}`);
     const monitor = await response.json();
-    setMonitorData(monitor);
+    setMonitorData(monitor[0]);
     setProfileImageUrl(monitor[0].foto);
   };
 
@@ -92,6 +92,7 @@ export default function Homepage() {
         <ProfileMenu
           isVisible={isMenuOpen}
           toggleChangePicture={toggleChangePicture}
+          monitor={monitorData}
         />
       </div>
 
